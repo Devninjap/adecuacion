@@ -1,0 +1,11 @@
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\NEGOCIO.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\NEGOCIO.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\DATOS.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\ENTIDADES.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\EntityFramework.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\DATOS.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\ENTIDADES.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Release\EntityFramework.xml
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Release\NEGOCIO.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Release\NEGOCIO.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Release\NEGOCIO.pdb

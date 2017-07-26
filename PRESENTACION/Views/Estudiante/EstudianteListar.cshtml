@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ENTIDADES.estudiante>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EstudianteListar</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <link rel="stylesheet" href="../../css/estilos.css">
+</head>
+<body>
+    <div class="container">
+
+        <h2>ESTUDIANTES REGISTRADOS</h2>
+        <a>
+            @Html.ActionLink("Registrar Estudiante", "EstudianteRegistrar", "Estudiante")
+            @*@Html.ActionLink("Registrar Estudiante", "Create", "Estudiante", new { @class = "button is-primary is-outlined" })*@
+        </a>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CODIGO </th>
+                    <th>APELLIDOS</th>
+                    <th>NOMBRES</th>
+                    <th>SEDE</th>
+                    <th>MODALIDAD</th>
+                    <th>CARRERA</th>
+                    <th>CONTINUAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>                       
+                        <td>@item.idEstudiante</td>
+                        <td>@item.codEstudiante</td>
+                        <td>@item.apellidosEstudiante</td>
+                        <td>@item.nombresEstudiante</td>
+                        <td>@item.sede</td>
+                        <td>@item.modalidad</td>
+                        <td>@item.carrera</td>
+
+                        <td>
+                            <div class="block">
+                            @Html.ActionLink("Adecuar", "ProcesoIndex/" + @item.idEstudiante, "Proceso", null, new { @class = "button is-danger is-outlined" })
+                            </div>
+                        </td> 
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

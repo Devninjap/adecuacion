@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="adecuacionIscFiuplaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="adecuacion">
+    <Key>
+      <PropertyRef Name="idAdecuacion" />
+    </Key>
+    <Property Name="idAdecuacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigoAdecuacion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="futAdecuacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaRecepcion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="periodo" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fechaEmision" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idEstudiante" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="estudiante" Relationship="Self.FK__adecuacio__idEst__145C0A3F" FromRole="adecuacion" ToRole="estudiante" />
+    <NavigationProperty Name="detalleAdecuacion" Relationship="Self.FK__detalleAd__idAde__173876EA" FromRole="adecuacion" ToRole="detalleAdecuacion" />
+  </EntityType>
+  <EntityType Name="detalleAdecuacion">
+    <Key>
+      <PropertyRef Name="idDetalle" />
+    </Key>
+    <Property Name="idDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idAdecuacion" Type="Int32" Nullable="false" />
+    <Property Name="idEquivalencia" Type="Int32" Nullable="false" />
+    <Property Name="notaAsignaturaA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="notaAsignaturaB" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fechaActa" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="adecuacion" Relationship="Self.FK__detalleAd__idAde__173876EA" FromRole="detalleAdecuacion" ToRole="adecuacion" />
+    <NavigationProperty Name="equivalenciaAsignatura" Relationship="Self.FK__detalleAd__idEqu__182C9B23" FromRole="detalleAdecuacion" ToRole="equivalenciaAsignatura" />
+  </EntityType>
+  <EntityType Name="equivalenciaAsignatura">
+    <Key>
+      <PropertyRef Name="idEquivalencia" />
+    </Key>
+    <Property Name="idEquivalencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codAsignaturaA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomAsignaturaA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="horasTeoricasA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="horasPracticasA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="totalHorasA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="creditosAsignaturaA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="cicloAsignaturaA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="planAsignaturaA" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="codAsignaturaB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nomAsignaturaB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="horasTeoricasB" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="horasPracticasB" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="totalHorasB" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="creditosAsignaturaB" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cicloAsignaturaB" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="planAsignaturaB" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="condicion" Type="Boolean" />
+    <Property Name="tecnico" Type="Boolean" />
+    <NavigationProperty Name="detalleAdecuacion" Relationship="Self.FK__detalleAd__idEqu__182C9B23" FromRole="equivalenciaAsignatura" ToRole="detalleAdecuacion" />
+  </EntityType>
+  <EntityType Name="estudiante">
+    <Key>
+      <PropertyRef Name="idEstudiante" />
+    </Key>
+    <Property Name="idEstudiante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codEstudiante" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellidosEstudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombresEstudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sede" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="modalidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="carrera" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="adecuacion" Relationship="Self.FK__adecuacio__idEst__145C0A3F" FromRole="estudiante" ToRole="adecuacion" />
+  </EntityType>
+  <Association Name="FK__adecuacio__idEst__145C0A3F">
+    <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+    <End Role="adecuacion" Type="Self.adecuacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estudiante">
+        <PropertyRef Name="idEstudiante" />
+      </Principal>
+      <Dependent Role="adecuacion">
+        <PropertyRef Name="idEstudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalleAd__idAde__173876EA">
+    <End Role="adecuacion" Type="Self.adecuacion" Multiplicity="1" />
+    <End Role="detalleAdecuacion" Type="Self.detalleAdecuacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="adecuacion">
+        <PropertyRef Name="idAdecuacion" />
+      </Principal>
+      <Dependent Role="detalleAdecuacion">
+        <PropertyRef Name="idAdecuacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalleAd__idEqu__182C9B23">
+    <End Role="equivalenciaAsignatura" Type="Self.equivalenciaAsignatura" Multiplicity="1" />
+    <End Role="detalleAdecuacion" Type="Self.detalleAdecuacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="equivalenciaAsignatura">
+        <PropertyRef Name="idEquivalencia" />
+      </Principal>
+      <Dependent Role="detalleAdecuacion">
+        <PropertyRef Name="idEquivalencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="adecuacionIscFiuplaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="adecuacion" EntityType="Self.adecuacion" />
+    <EntitySet Name="detalleAdecuacion" EntityType="Self.detalleAdecuacion" />
+    <EntitySet Name="equivalenciaAsignatura" EntityType="Self.equivalenciaAsignatura" />
+    <EntitySet Name="estudiante" EntityType="Self.estudiante" />
+    <AssociationSet Name="FK__adecuacio__idEst__145C0A3F" Association="Self.FK__adecuacio__idEst__145C0A3F">
+      <End Role="estudiante" EntitySet="estudiante" />
+      <End Role="adecuacion" EntitySet="adecuacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalleAd__idAde__173876EA" Association="Self.FK__detalleAd__idAde__173876EA">
+      <End Role="adecuacion" EntitySet="adecuacion" />
+      <End Role="detalleAdecuacion" EntitySet="detalleAdecuacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalleAd__idEqu__182C9B23" Association="Self.FK__detalleAd__idEqu__182C9B23">
+      <End Role="equivalenciaAsignatura" EntitySet="equivalenciaAsignatura" />
+      <End Role="detalleAdecuacion" EntitySet="detalleAdecuacion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

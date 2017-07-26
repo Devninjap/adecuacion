@@ -1,0 +1,92 @@
+﻿@model ENTIDADES.estudiante
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EstudianteRegistrar</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+</head>
+<body>
+    @using (Html.BeginForm("EstudianteNuevo", "Estudiante", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal" style="margin-left:100px">
+            <h4>NUEVO ESTUDIANTE</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.idEstudiante, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.idEstudiante, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.idEstudiante, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+    
+            <div class="form-group field">
+                @Html.LabelFor(model => model.codEstudiante, htmlAttributes: new { @class = "control-label col-md-2 label" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.codEstudiante, new { htmlAttributes = new { @class = "form-control is-success" } })
+                    @Html.ValidationMessageFor(model => model.codEstudiante, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.apellidosEstudiante, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.apellidosEstudiante, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.apellidosEstudiante, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.nombresEstudiante, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.nombresEstudiante, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nombresEstudiante, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.sede, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.sede, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.sede, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.modalidad, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.modalidad, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.modalidad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.carrera, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.carrera, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.carrera, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Registrar" class="btn btn-default button is-success is-outlined"/>
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+    <div style="margin-left:100px">
+        @Html.ActionLink("Retornar", "EstudianteListar")
+    </div>
+</body>
+</html>

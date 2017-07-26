@@ -1,0 +1,12 @@
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\DATOS.dll.config
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\DATOS.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\DATOS.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\ENTIDADES.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\EntityFramework.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\ENTIDADES.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\EntityFramework.xml
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\obj\Release\DATOS.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\obj\Release\DATOS.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\DATOS\obj\Release\DATOS.pdb

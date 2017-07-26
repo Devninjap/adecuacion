@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="adecuacionIscFiuplaModelStoreContainer" CdmEntityContainer="adecuacionIscFiuplaEntities">
+    <EntitySetMapping Name="adecuacion">
+      <EntityTypeMapping TypeName="adecuacionIscFiuplaModel.adecuacion">
+        <MappingFragment StoreEntitySet="adecuacion">
+          <ScalarProperty Name="idAdecuacion" ColumnName="idAdecuacion" />
+          <ScalarProperty Name="codigoAdecuacion" ColumnName="codigoAdecuacion" />
+          <ScalarProperty Name="futAdecuacion" ColumnName="futAdecuacion" />
+          <ScalarProperty Name="fechaRecepcion" ColumnName="fechaRecepcion" />
+          <ScalarProperty Name="periodo" ColumnName="periodo" />
+          <ScalarProperty Name="fechaEmision" ColumnName="fechaEmision" />
+          <ScalarProperty Name="idEstudiante" ColumnName="idEstudiante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detalleAdecuacion">
+      <EntityTypeMapping TypeName="adecuacionIscFiuplaModel.detalleAdecuacion">
+        <MappingFragment StoreEntitySet="detalleAdecuacion">
+          <ScalarProperty Name="idDetalle" ColumnName="idDetalle" />
+          <ScalarProperty Name="idAdecuacion" ColumnName="idAdecuacion" />
+          <ScalarProperty Name="idEquivalencia" ColumnName="idEquivalencia" />
+          <ScalarProperty Name="notaAsignaturaA" ColumnName="notaAsignaturaA" />
+          <ScalarProperty Name="notaAsignaturaB" ColumnName="notaAsignaturaB" />
+          <ScalarProperty Name="fechaActa" ColumnName="fechaActa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="equivalenciaAsignatura">
+      <EntityTypeMapping TypeName="adecuacionIscFiuplaModel.equivalenciaAsignatura">
+        <MappingFragment StoreEntitySet="equivalenciaAsignatura">
+          <ScalarProperty Name="idEquivalencia" ColumnName="idEquivalencia" />
+          <ScalarProperty Name="codAsignaturaA" ColumnName="codAsignaturaA" />
+          <ScalarProperty Name="nomAsignaturaA" ColumnName="nomAsignaturaA" />
+          <ScalarProperty Name="horasTeoricasA" ColumnName="horasTeoricasA" />
+          <ScalarProperty Name="horasPracticasA" ColumnName="horasPracticasA" />
+          <ScalarProperty Name="totalHorasA" ColumnName="totalHorasA" />
+          <ScalarProperty Name="creditosAsignaturaA" ColumnName="creditosAsignaturaA" />
+          <ScalarProperty Name="cicloAsignaturaA" ColumnName="cicloAsignaturaA" />
+          <ScalarProperty Name="planAsignaturaA" ColumnName="planAsignaturaA" />
+          <ScalarProperty Name="codAsignaturaB" ColumnName="codAsignaturaB" />
+          <ScalarProperty Name="nomAsignaturaB" ColumnName="nomAsignaturaB" />
+          <ScalarProperty Name="horasTeoricasB" ColumnName="horasTeoricasB" />
+          <ScalarProperty Name="horasPracticasB" ColumnName="horasPracticasB" />
+          <ScalarProperty Name="totalHorasB" ColumnName="totalHorasB" />
+          <ScalarProperty Name="creditosAsignaturaB" ColumnName="creditosAsignaturaB" />
+          <ScalarProperty Name="cicloAsignaturaB" ColumnName="cicloAsignaturaB" />
+          <ScalarProperty Name="planAsignaturaB" ColumnName="planAsignaturaB" />
+          <ScalarProperty Name="condicion" ColumnName="condicion" />
+          <ScalarProperty Name="tecnico" ColumnName="tecnico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estudiante">
+      <EntityTypeMapping TypeName="adecuacionIscFiuplaModel.estudiante">
+        <MappingFragment StoreEntitySet="estudiante">
+          <ScalarProperty Name="idEstudiante" ColumnName="idEstudiante" />
+          <ScalarProperty Name="codEstudiante" ColumnName="codEstudiante" />
+          <ScalarProperty Name="apellidosEstudiante" ColumnName="apellidosEstudiante" />
+          <ScalarProperty Name="nombresEstudiante" ColumnName="nombresEstudiante" />
+          <ScalarProperty Name="sede" ColumnName="sede" />
+          <ScalarProperty Name="modalidad" ColumnName="modalidad" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="adecuacionIscFiuplaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="adecuacion">
+    <Key>
+      <PropertyRef Name="idAdecuacion" />
+    </Key>
+    <Property Name="idAdecuacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codigoAdecuacion" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="futAdecuacion" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fechaRecepcion" Type="date" Nullable="false" />
+    <Property Name="periodo" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="fechaEmision" Type="date" Nullable="false" />
+    <Property Name="idEstudiante" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="detalleAdecuacion">
+    <Key>
+      <PropertyRef Name="idDetalle" />
+    </Key>
+    <Property Name="idDetalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idAdecuacion" Type="int" Nullable="false" />
+    <Property Name="idEquivalencia" Type="int" Nullable="false" />
+    <Property Name="notaAsignaturaA" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="notaAsignaturaB" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="fechaActa" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="equivalenciaAsignatura">
+    <Key>
+      <PropertyRef Name="idEquivalencia" />
+    </Key>
+    <Property Name="idEquivalencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codAsignaturaA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nomAsignaturaA" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="horasTeoricasA" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="horasPracticasA" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="totalHorasA" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="creditosAsignaturaA" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="cicloAsignaturaA" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="planAsignaturaA" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="codAsignaturaB" Type="varchar" MaxLength="10" />
+    <Property Name="nomAsignaturaB" Type="varchar" MaxLength="100" />
+    <Property Name="horasTeoricasB" Type="char" MaxLength="2" />
+    <Property Name="horasPracticasB" Type="char" MaxLength="2" />
+    <Property Name="totalHorasB" Type="char" MaxLength="2" />
+    <Property Name="creditosAsignaturaB" Type="char" MaxLength="2" />
+    <Property Name="cicloAsignaturaB" Type="char" MaxLength="2" />
+    <Property Name="planAsignaturaB" Type="char" MaxLength="6" />
+    <Property Name="condicion" Type="bit" />
+    <Property Name="tecnico" Type="bit" />
+  </EntityType>
+  <EntityType Name="estudiante">
+    <Key>
+      <PropertyRef Name="idEstudiante" />
+    </Key>
+    <Property Name="idEstudiante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="codEstudiante" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="apellidosEstudiante" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nombresEstudiante" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sede" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="modalidad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="carrera" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__adecuacio__idEst__145C0A3F">
+    <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+    <End Role="adecuacion" Type="Self.adecuacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estudiante">
+        <PropertyRef Name="idEstudiante" />
+      </Principal>
+      <Dependent Role="adecuacion">
+        <PropertyRef Name="idEstudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalleAd__idAde__173876EA">
+    <End Role="adecuacion" Type="Self.adecuacion" Multiplicity="1" />
+    <End Role="detalleAdecuacion" Type="Self.detalleAdecuacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="adecuacion">
+        <PropertyRef Name="idAdecuacion" />
+      </Principal>
+      <Dependent Role="detalleAdecuacion">
+        <PropertyRef Name="idAdecuacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalleAd__idEqu__182C9B23">
+    <End Role="equivalenciaAsignatura" Type="Self.equivalenciaAsignatura" Multiplicity="1" />
+    <End Role="detalleAdecuacion" Type="Self.detalleAdecuacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="equivalenciaAsignatura">
+        <PropertyRef Name="idEquivalencia" />
+      </Principal>
+      <Dependent Role="detalleAdecuacion">
+        <PropertyRef Name="idEquivalencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="adecuacionIscFiuplaModelStoreContainer">
+    <EntitySet Name="adecuacion" EntityType="Self.adecuacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detalleAdecuacion" EntityType="Self.detalleAdecuacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="equivalenciaAsignatura" EntityType="Self.equivalenciaAsignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="estudiante" EntityType="Self.estudiante" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__adecuacio__idEst__145C0A3F" Association="Self.FK__adecuacio__idEst__145C0A3F">
+      <End Role="estudiante" EntitySet="estudiante" />
+      <End Role="adecuacion" EntitySet="adecuacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalleAd__idAde__173876EA" Association="Self.FK__detalleAd__idAde__173876EA">
+      <End Role="adecuacion" EntitySet="adecuacion" />
+      <End Role="detalleAdecuacion" EntitySet="detalleAdecuacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalleAd__idEqu__182C9B23" Association="Self.FK__detalleAd__idEqu__182C9B23">
+      <End Role="equivalenciaAsignatura" EntitySet="equivalenciaAsignatura" />
+      <End Role="detalleAdecuacion" EntitySet="detalleAdecuacion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

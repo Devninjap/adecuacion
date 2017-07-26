@@ -1,0 +1,5 @@
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\ENTIDADES\bin\Release\ENTIDADES.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\ENTIDADES\bin\Release\ENTIDADES.pdb
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\ENTIDADES\obj\Release\ENTIDADES.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\ENTIDADES\obj\Release\ENTIDADES.dll
+C:\Users\Usuario\Documents\Visual Studio 2015\Projects\sistemaAdecuacionIsc\ENTIDADES\obj\Release\ENTIDADES.pdb

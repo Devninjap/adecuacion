@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ENTIDADES.equivalenciaAsignatura>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AsignaturasListar</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <style>
+        body {
+            font-size: .8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h2>LISTADO GENERAL DE ASIGNATURAS</h2>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CODIGO </th>
+                    <th>ASIGNATURA</th>
+                    <th>HT</th>
+                    <th>HP</th>
+                    <th>TH</th>
+                    <th>CREDITOS</th>
+                    <th>CICLO</th>
+                    <th>PLAN</th>
+                    <th>CODIGO</th>
+                    <th>U.E.C</th>
+                    <th>HT</th>
+                    <th>HP</th>
+                    <th>TH</th>
+                    <th>CREDITOS</th>
+                    <th>CICLO</th>
+                    <th>PLAN</th>
+                    <!--<th>CONDICION</th>
+                    <th>TECNICO</th>-->
+                    <th>OPERACIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.idEquivalencia</td>
+                        <td>@item.codAsignaturaA</td>
+                        <td>@item.nomAsignaturaA</td>
+                        <td>@item.horasTeoricasA</td>
+                        <td>@item.horasPracticasA</td>
+                        <td>@item.totalHorasA</td>
+                        <td>@item.creditosAsignaturaA</td>
+                        <td>@item.cicloAsignaturaA</td>
+                        <td>@item.planAsignaturaA</td>
+                        <td>@item.codAsignaturaB</td>
+                        <td>@item.nomAsignaturaB</td>
+                        <td>@item.horasTeoricasB</td>
+                        <td>@item.horasPracticasB</td>
+                        <td>@item.totalHorasB</td>
+                        <td>@item.creditosAsignaturaB</td>
+                        <td>@item.cicloAsignaturaB</td>
+                        <td>@item.planAsignaturaB</td>
+                        <!--<td>@item.condicion</td>
+                        <td>@item.tecnico</td>-->
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
