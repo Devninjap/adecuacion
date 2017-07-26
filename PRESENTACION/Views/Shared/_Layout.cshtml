@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstudianteListar</title>
+    <link rel="stylesheet" href="../../css/bulma.css">
+    <link rel="stylesheet" href="../../css/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-fixed">
+        @*<div class="navbar-brand">
+            <a href="#" class="navbar-item">
+
+            </a>
+            <div class="navbar-burger burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>*@
+        <div class="navbar-end">
+            <img src="../../img/usuario.png" alt="imagen" class="navbar-item">
+            <a href="#" class="navbar-item item-cerrarSesion">
+                Cerrar sesión
+            </a>
+        </div>
+    </nav>
+    <aside class="menu menu-fixed">
+        <div class="logo">
+            <a href="#">SWAP</a>
+        </div>
+        <ul class="menu-list">
+            <li><a href="@Url.Action("Index", "Home")"><img src="../../img/inicio.png" />   Inicio</a></li>
+            <li><a href="@Url.Action("EstudianteListar", "Estudiante")"><img src="../../img/estudiantes.png" />   Estudiantes</a></li>
+            <li><a href="@Url.Action("AsignaturasListar", "Asignatura")"><img src="../../img/asignaturas.png" />   Asignaturas</a></li>
+            <li><a href="@Url.Action("ReporteIndex", "Reporte")"><img src="../../img/reportes.png"/>   Reportes</a></li>
+        </ul>
+    </aside>
+
+    <div class="cuerpo">
+        @RenderBody()
+    </div>
+</body>
+</html>

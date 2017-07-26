@@ -1,70 +1,14 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <style>
-        li {
-            list-style: none;
-        }
-    </style>
-    <link rel="stylesheet" href="../../css/bulma.css">
-    <link rel="stylesheet" href="../../css/estilos.css">
-</head>
-<body>
-    <div class="block" style=padding:3rem 1.5rem>
-        <div class="box">
-            <h1 class="title">SISTEMA DE ADECUACIÓN DE PLANES DE ESTUDIOS</h1>
-            <h3 class="subtitle">Universidad Peruana los Andes</h3>
-        </div>
-        <div class="hero-foot" style=background-color:#00d1b2>
-            <div class="container">
-                <nav class="tabs is-boxed">
-                    <ul>
-                        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Estudiantes", "EstudianteListar", "Estudiante")</li>
-                        <li>@Html.ActionLink("Asignaturas", "AsignaturasListar", "Asignatura")</li>
-                        <li>@Html.ActionLink("Adecuacion", "ProcesoIndex/2", "Proceso")</li>
-                        <li>@Html.ActionLink("Reporte", "ReporteIndex", "Reporte")</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+<div class="inicio-img">
+    <div class="opaque">
+        <h1>SISTEMA WEB DE ADECUACION DE PLANES DE ESTUDIOS</h1>
+        <p>Dirección de la Escuela Profesional de Ingeniería de Sistemas</p>
     </div>
-
-    <section class="section">
-        <div class="container">
-            <h1 class="title">Universidad Peruana los Andes</h1>
-            <h2 class="subtitle">
-                Bienvenidos<strong> Facultad de Ingenieria</strong>
-            </h2>
-            <hr>
-        </div>
-    </section>
-
-    <footer class="footer" style="margin-top:0px">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-3">
-                    <div id="about" class="content">
-                        <strong property="dct:title" rel="dct:type">
-                            ASP.Net
-                        </strong>
-                        <p>Copyright © Todos los Derechos Reservados</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+</div>
 
 
-
-</body>
-</html>
 
