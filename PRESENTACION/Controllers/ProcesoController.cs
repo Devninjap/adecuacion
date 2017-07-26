@@ -17,5 +17,23 @@ namespace PRESENTACION.Controllers
             operaciones.pEquivalencias = new NEGOCIO.blEquivalenciaAsignatura().listarTodos();
             return View(operaciones);
         }
+
+        [HttpPost]
+        public void ajax(detalleAdecuacion[] item)
+        {
+            NEGOCIO.blDetalleAdecuacion est = new NEGOCIO.blDetalleAdecuacion();
+            for (int i = 0; i < item.Length; i++)
+            {
+                est.registrar(item[i]);
+            }
+        }
+
+        [HttpPost]
+        public int ajax_adecuacion(adecuacion item)
+        {
+            new NEGOCIO.blAdecuacion().registrar(item);
+            int idAdecuacion = new NEGOCIO.blAdecuacion().listarTodos().FirstOrDefault(x => x.idEstudiante == item.idEstudiante).idAdecuacion;
+            return idAdecuacion;
+        }
     }
 }
