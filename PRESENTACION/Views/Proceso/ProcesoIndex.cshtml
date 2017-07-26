@@ -1,305 +1,285 @@
 ﻿@model ENTIDADES.claseOperaciones
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ProcesoIndex</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
-    <link rel="stylesheet" href="../../css/bulma.css">
-    <link rel="stylesheet" href="../../css/estilos.css">
-</head>
-<body>
-    <div class="container">
-        <div class="c-estudiante">
-            <ul class="data-estudianteList">
-                <li>
-                    <label class="label"><span class="data-title">APELLIDOS Y NOMBRES</span><span class="data-estudiante">: @Model.pEstudiante.apellidosEstudiante,@Model.pEstudiante.nombresEstudiante</span></label>
-                </li>
-                <li>
-                    <label class="label"><span class="data-title">CODIGO DE ESTUDIANTE</span><span class="data-estudiante">: @Model.pEstudiante.codEstudiante</span></label>
-                </li>
-                <li>
-                    <label class="label"><span class="data-title">SEDE</span><span class="data-estudiante">: @Model.pEstudiante.sede</span></label>
-                </li>
-                <li>
-                    <label class="label"><span class="data-title">MODALIDAD DE ESTUDIOS</span><span class="data-estudiante">: @Model.pEstudiante.modalidad</span></label>
-                </li>
-                <li>
-                    <label class="label"><span class="data-title">CARRERA PROFESIONAL</span><span class="data-estudiante">: @Model.pEstudiante.carrera</span></label>
-                </li>
-            </ul>
-        </div>
-        <div class="c-adecuacion">
-            <div class="columns">
-                <div class="column is-4">
-                    <div class="field">
-                        <label class="label">F.U.T</label>
-                        <div class="control">
-                            <input type="text" class="input" placeholder="Número de F.U.T" id="numeroFut">
-                        </div>
+<div class="contenedor">
+    <div class="c-estudiante">
+        <ul class="data-estudianteList">
+            <li>
+                <label class="label"><span class="data-title">APELLIDOS Y NOMBRES</span><span class="data-estudiante">: @Model.pEstudiante.apellidosEstudiante,@Model.pEstudiante.nombresEstudiante</span></label>
+            </li>
+            <li>
+                <label class="label"><span class="data-title">CODIGO DE ESTUDIANTE</span><span class="data-estudiante">: @Model.pEstudiante.codEstudiante</span></label>
+            </li>
+            <li>
+                <label class="label"><span class="data-title">SEDE</span><span class="data-estudiante">: @Model.pEstudiante.sede</span></label>
+            </li>
+            <li>
+                <label class="label"><span class="data-title">MODALIDAD DE ESTUDIOS</span><span class="data-estudiante">: @Model.pEstudiante.modalidad</span></label>
+            </li>
+            <li>
+                <label class="label"><span class="data-title">CARRERA PROFESIONAL</span><span class="data-estudiante">: @Model.pEstudiante.carrera</span></label>
+            </li>
+        </ul>
+    </div>
+    <div class="c-adecuacion">
+        <div class="columns">
+            <div class="column is-4">
+                <div class="field">
+                    <label class="label">F.U.T</label>
+                    <div class="control">
+                        <input type="text" class="input" placeholder="Número de F.U.T" id="numeroFut">
                     </div>
                 </div>
-                <div class="column is-4">
-                    <div class="field">
-                        <label class="label">PERIODO ACADÉMICO</label>
-                        <div class="control">
-                            <input type="text" class="input" placeholder="Periodo académico" id="periodo">
-                        </div>
+            </div>
+            <div class="column is-4">
+                <div class="field">
+                    <label class="label">PERIODO ACADÉMICO</label>
+                    <div class="control">
+                        <input type="text" class="input" placeholder="Periodo académico" id="periodo">
                     </div>
                 </div>
-                <div class="column is-4">
-                    <div class="field">
-                        <label class="label">FECHA DE EMISION</label>
-                        <div class="control">
-                            <label class="label">@DateTime.Now.Date</label>
-                        </div>
+            </div>
+            <div class="column is-4">
+                <div class="field">
+                    <label class="label">FECHA DE EMISION</label>
+                    <div class="control">
+                        <label class="label">@DateTime.Now.Date</label>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="c-equivalencias">
-            <div class="c-ciclo">
-                <label class="label">PRIMER CICLO</label>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>MARCAR</th>
-                            <th>PLAN</th>
-                            <th>CODIGO</th>
-                            <th>U.E.C</th>
-                            <th>CODIGO</th>
-                            <th>CICLO</th>
-                            <th>ASIGNATURA</th>
-                            <th>NOTA</th>
-                            <th>FECHA DE ACTA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "01"))
-                        {                             
-                            <tr>
-                                <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
-                                <td><input type="checkbox" class="seleccionado"/></td>
-                                <td>@item.planAsignaturaA</td>
-                                <td>@item.codAsignaturaA</td>
-                                <td>@item.nomAsignaturaA</td>
-                                <td>@item.codAsignaturaB</td>
-                                <td>@item.cicloAsignaturaB</td>
-                                <td>@item.nomAsignaturaB</td>
-                                <td><input class="input nota" type="number" placeholder="Nota"></td>
-                                <td><input class="input fecha" type="date"></td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="c-ciclo">
-                <label class="label">SEGUNDO CICLO</label>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>MARCAR</th>
-                            <th>PLAN</th>
-                            <th>CODIGO</th>
-                            <th>U.E.C</th>
-                            <th>CODIGO</th>
-                            <th>CICLO</th>
-                            <th>ASIGNATURA</th>
-                            <th>NOTA</th>
-                            <th>FECHA DE ACTA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "02"))
-                        {
-                            <tr>
-                                <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
-                                <td><input type="checkbox" class="seleccionado"/></td>
-                                <td>@item.planAsignaturaA</td>
-                                <td>@item.codAsignaturaA</td>
-                                <td>@item.nomAsignaturaA</td>
-                                <td>@item.codAsignaturaB</td>
-                                <td>@item.cicloAsignaturaB</td>
-                                <td>@item.nomAsignaturaB</td>
-                                <td><input class="input nota" type="number" placeholder="Nota"></td>
-                                <td><input class="input fecha" type="date"></td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="c-ciclo">
-                <label class="label">TERCER CICLO</label>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>MARCAR</th>
-                            <th>PLAN</th>
-                            <th>CODIGO</th>
-                            <th>U.E.C</th>
-                            <th>CODIGO</th>
-                            <th>CICLO</th>
-                            <th>ASIGNATURA</th>
-                            <th>NOTA</th>
-                            <th>FECHA DE ACTA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "03"))
-                        {
-                            <tr>
-                                <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
-                                <td><input type="checkbox" class="seleccionado"/></td>
-                                <td>@item.planAsignaturaA</td>
-                                <td>@item.codAsignaturaA</td>
-                                <td>@item.nomAsignaturaA</td>
-                                <td>@item.codAsignaturaB</td>
-                                <td>@item.cicloAsignaturaB</td>
-                                <td>@item.nomAsignaturaB</td>
-                                <td><input class="input nota" type="number" placeholder="Nota"></td>
-                                <td><input class="input fecha" type="date"></td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="c-ciclo">
-                <label class="label">CUARTO CICLO</label>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>MARCAR</th>
-                            <th>PLAN</th>
-                            <th>CODIGO</th>
-                            <th>U.E.C</th>
-                            <th>CODIGO</th>
-                            <th>CICLO</th>
-                            <th>ASIGNATURA</th>
-                            <th>NOTA</th>
-                            <th>FECHA DE ACTA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "04"))
-                        {
-                            <tr>
-                                <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
-                                <td><input type="checkbox" class="seleccionado"/></td>
-                                <td>@item.planAsignaturaA</td>
-                                <td>@item.codAsignaturaA</td>
-                                <td>@item.nomAsignaturaA</td>
-                                <td>@item.codAsignaturaB</td>
-                                <td>@item.cicloAsignaturaB</td>
-                                <td>@item.nomAsignaturaB</td>
-                                <td><input class="input nota" type="number" placeholder="Nota"></td>
-                                <td><input class="input fecha" type="date"></td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-            <div class="c-ciclo">
-                <label class="label">QUINTO CICLO</label>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>MARCAR</th>
-                            <th>PLAN</th>
-                            <th>CODIGO</th>
-                            <th>U.E.C</th>
-                            <th>CODIGO</th>
-                            <th>CICLO</th>
-                            <th>ASIGNATURA</th>
-                            <th>NOTA</th>
-                            <th>FECHA DE ACTA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
-                        {
-                            <tr>
-                                <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
-                                <td><input type="checkbox" class="seleccionado"/></td>
-                                <td>@item.planAsignaturaA</td>
-                                <td>@item.codAsignaturaA</td>
-                                <td>@item.nomAsignaturaA</td>
-                                <td>@item.codAsignaturaB</td>
-                                <td>@item.cicloAsignaturaB</td>
-                                <td>@item.nomAsignaturaB</td>
-                                <td><input class="input nota" type="number" placeholder="Nota"></td>
-                                <td><input class="input fecha" type="date"></td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-
-            <button onclick="registrarAdecuacion()"class="button is-success">Registrar Adecuacion</button>
-
-            <script>
-
-
-                let crearJsonAdecuacion = function () {
-                    return {
-                        codigoAdecuacion: @Model.pEstudiante.idEstudiante + "-2017-EP-ISC-FIUPLA",
-                        futAdecuacion: document.getElementById('numeroFut').value,
-                        fechaRecepcion: '@DateTime.Now.ToString("d")',
-                        periodo: document.getElementById('periodo').value,
-                        fechaEmision: '@DateTime.Now.ToString("d")',
-                        idEstudiante: @Model.pEstudiante.idEstudiante,
-                    }
-                }
-
-                let registrarAdecuacion = function(){
-                    //console.log(crearJsonAdecuacion());
-                    let xhr = new XMLHttpRequest();
-                    xhr.open('POST', '/Proceso/ajax_adecuacion', true);
-                    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-                    xhr.onload = function () {
-                        registrarDetalles(xhr.response);
-                    };
-                    xhr.send(JSON.stringify(crearJsonAdecuacion()));
-                }
-
-                let crearJson = function (idAdecuacion) {
-
-                    let listDetalleAdecuacion = new Array();
-                    let selectItems = document.getElementsByClassName('seleccionado');
-                    for (var i = 0; i < selectItems.length; i++)
+    </div>
+    <div class="c-equivalencias">
+        <div class="c-ciclo">
+            <label class="label">PRIMER CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "01"))
                     {
-                        if(selectItems[i].checked){
-                            listDetalleAdecuacion.push({
-                                idAdecuacion: idAdecuacion,
-                                idEquivalencia: parseInt(document.getElementsByClassName('idEquivalencia')[i].innerText),
-                                notaAsignaturaA: document.getElementsByClassName('nota')[i].value,
-                                notaAsignaturaB: document.getElementsByClassName('nota')[i].value,
-                                fechaActa: document.getElementsByClassName('fecha')[i].value,
-                            });
-                        }
+                        <tr>
+                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+        <div class="c-ciclo">
+            <label class="label">SEGUNDO CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "02"))
+                    {
+                        <tr>
+                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+        <div class="c-ciclo">
+            <label class="label">TERCER CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "03"))
+                    {
+                        <tr>
+                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+        <div class="c-ciclo">
+            <label class="label">CUARTO CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "04"))
+                    {
+                        <tr>
+                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+        <div class="c-ciclo">
+            <label class="label">QUINTO CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    {
+                        <tr>
+                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+
+        <button onclick="registrarAdecuacion()" class="button is-success">Registrar Adecuacion</button>
+
+        <script>
+
+
+            let crearJsonAdecuacion = function () {
+                return {
+                    codigoAdecuacion: @Model.pEstudiante.idEstudiante + "-2017-EP-ISC-FIUPLA",
+                    futAdecuacion: document.getElementById('numeroFut').value,
+                    fechaRecepcion: '@DateTime.Now.ToString("d")',
+                    periodo: document.getElementById('periodo').value,
+                    fechaEmision: '@DateTime.Now.ToString("d")',
+                    idEstudiante: @Model.pEstudiante.idEstudiante,
+                }
+            }
+
+            let registrarAdecuacion = function(){
+                //console.log(crearJsonAdecuacion());
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', '/Proceso/ajax_adecuacion', true);
+                xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+                xhr.onload = function () {
+                    registrarDetalles(xhr.response);
+                };
+                xhr.send(JSON.stringify(crearJsonAdecuacion()));
+            }
+
+            let crearJson = function (idAdecuacion) {
+
+                let listDetalleAdecuacion = new Array();
+                let selectItems = document.getElementsByClassName('seleccionado');
+                for (var i = 0; i < selectItems.length; i++)
+                {
+                    if(selectItems[i].checked){
+                        listDetalleAdecuacion.push({
+                            idAdecuacion: idAdecuacion,
+                            idEquivalencia: parseInt(document.getElementsByClassName('idEquivalencia')[i].innerText),
+                            notaAsignaturaA: document.getElementsByClassName('nota')[i].value,
+                            notaAsignaturaB: document.getElementsByClassName('nota')[i].value,
+                            fechaActa: document.getElementsByClassName('fecha')[i].value,
+                        });
                     }
-
-                    console.log(listDetalleAdecuacion);
-                    return listDetalleAdecuacion;
                 }
 
-                let registrarDetalles = function (idAdecuacion) {
+                console.log(listDetalleAdecuacion);
+                return listDetalleAdecuacion;
+            }
 
-                    let xhr = new XMLHttpRequest();
-                    xhr.open('POST', '/Proceso/ajax', true);
-                    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-                    xhr.send(JSON.stringify(crearJson(idAdecuacion)));
-                }
+            let registrarDetalles = function (idAdecuacion) {
+
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', '/Proceso/ajax', true);
+                xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+                xhr.send(JSON.stringify(crearJson(idAdecuacion)));
+            }
         </script>
     </div>
 
-    </div>
-    <hr />
-    
-</body>
-</html>
+</div>
