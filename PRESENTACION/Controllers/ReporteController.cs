@@ -13,5 +13,10 @@ namespace PRESENTACION.Controllers
         {
             return View();
         }
-    }
+
+		public ActionResult reporte()
+		{
+			return View();
+		}
+	}
 }
