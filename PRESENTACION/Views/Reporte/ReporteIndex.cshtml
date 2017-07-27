@@ -1,8 +1,66 @@
-﻿
+﻿@model IEnumerable<ENTIDADES.detalleAdecuacion>
+
 @{
     ViewBag.Title = "Index";
 }
 
 <div class="contenedor">
-    <img src="../../img/construccion.png" alt="Fondex papu"/>
+    <h1>ADECUACIONES</h1>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idDetalle)
+            </th>
+            <th>
+                ID-ADECUACION
+            </th>
+            <th>
+                ID-EQUIV
+            </th>
+            <th>
+                NOTA-A
+            </th>
+            <th>
+                NOTA-B
+            </th>
+            <th>
+                FECHA ACTA
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.fechaActa)
+            </th>*@
+            <th>ELEGIR</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idDetalle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idAdecuacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idEquivalencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.notaAsignaturaA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.notaAsignaturaB)
+                </td>
+                <td>
+                    @item.fechaActa.ToString("d")
+                </td>
+                <td>
+                    <a class="button is-danger is-outlined">VISUALIZAR</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
 </div>

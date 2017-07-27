@@ -5,6 +5,8 @@
 }
 
 <div class="contenedor">
+    <h1>ADECUACION</h1>
+    <hr />
     <div class="c-estudiante">
         <ul class="data-estudianteList">
             <li>
@@ -54,7 +56,7 @@
     </div>
     <div class="c-equivalencias">
         <div class="c-ciclo">
-            <label class="label">PRIMER CICLO</label>
+            <label class="label" style="color:#ff0000">PRIMER CICLO</label>
             <table class="table">
                 <thead>
                     <tr>
@@ -73,7 +75,7 @@
                     @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "01"))
                     {
                         <tr>
-                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
                             <td><input type="checkbox" class="seleccionado" /></td>
                             <td>@item.planAsignaturaA</td>
                             <td>@item.codAsignaturaA</td>
@@ -107,7 +109,7 @@
                     @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "02"))
                     {
                         <tr>
-                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
                             <td><input type="checkbox" class="seleccionado" /></td>
                             <td>@item.planAsignaturaA</td>
                             <td>@item.codAsignaturaA</td>
@@ -141,7 +143,7 @@
                     @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "03"))
                     {
                         <tr>
-                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
                             <td><input type="checkbox" class="seleccionado" /></td>
                             <td>@item.planAsignaturaA</td>
                             <td>@item.codAsignaturaA</td>
@@ -175,7 +177,7 @@
                     @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "04"))
                     {
                         <tr>
-                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
                             <td><input type="checkbox" class="seleccionado" /></td>
                             <td>@item.planAsignaturaA</td>
                             <td>@item.codAsignaturaA</td>
@@ -209,7 +211,112 @@
                     @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
                     {
                         <tr>
-                            <td class="idEquivalencia">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="c-ciclo">
+            <label class="label">SEXTO CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    {
+                        <tr>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="c-ciclo">
+            <label class="label">SEPTIMO CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    {
+                        <tr>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
+                            <td><input type="checkbox" class="seleccionado" /></td>
+                            <td>@item.planAsignaturaA</td>
+                            <td>@item.codAsignaturaA</td>
+                            <td>@item.nomAsignaturaA</td>
+                            <td>@item.codAsignaturaB</td>
+                            <td>@item.cicloAsignaturaB</td>
+                            <td>@item.nomAsignaturaB</td>
+                            <td><input class="input nota" type="number" placeholder="Nota"></td>
+                            <td><input class="input fecha" type="date"></td>
+                        </tr>}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="c-ciclo">
+            <label class="label">OCTAVO CICLO</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MARCAR</th>
+                        <th>PLAN</th>
+                        <th>CODIGO</th>
+                        <th>U.E.C</th>
+                        <th>CODIGO</th>
+                        <th>CICLO</th>
+                        <th>ASIGNATURA</th>
+                        <th>NOTA</th>
+                        <th>FECHA DE ACTA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    {
+                        <tr>
+                            <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
                             <td><input type="checkbox" class="seleccionado" /></td>
                             <td>@item.planAsignaturaA</td>
                             <td>@item.codAsignaturaA</td>
@@ -225,6 +332,8 @@
         </div>
 
         <button onclick="registrarAdecuacion()" class="button is-success">Registrar Adecuacion</button>
+
+        @Html.ActionLink("Listar Estudiantes", "EstudianteListar", "Estudiante", null, new { @class = "button is-danger is-outlined" })
 
         <script>
 

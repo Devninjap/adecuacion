@@ -142,7 +142,6 @@
     <Content Include="Views\Estudiante\EstudianteListar.cshtml" />
     <Content Include="Views\Proceso\ProcesoIndex.cshtml" />
     <Content Include="Views\Asignatura\AsignaturasListar.cshtml" />
-    <Content Include="Views\Reporte\ReporteIndex.cshtml" />
     <Content Include="Views\Estudiante\EstudianteRegistrar.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -151,6 +150,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Reporte\ReporteIndex.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -11,9 +11,11 @@ namespace ENTIDADES
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class detalleAdecuacion
     {
+        [Display(Name="ID")]
         public int idDetalle { get; set; }
         public int idAdecuacion { get; set; }
         public int idEquivalencia { get; set; }

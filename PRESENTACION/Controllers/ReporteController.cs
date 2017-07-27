@@ -11,7 +11,8 @@ namespace PRESENTACION.Controllers
         // GET: Reporte
         public ActionResult ReporteIndex()
         {
-            return View();
+            var Model = new NEGOCIO.blDetalleAdecuacion().listarTodos();
+            return View(Model);
         }
     }
 }
