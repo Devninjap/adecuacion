@@ -34,5 +34,11 @@ namespace NEGOCIO
         {
             return new daAdecuacion().registrar(entidad);
         }
-    }
+
+		public object consultaReporte(int idAdecuacion)
+		{
+			return new daAdecuacion().consultaReporte(idAdecuacion);
+		}
+
+	}
 }

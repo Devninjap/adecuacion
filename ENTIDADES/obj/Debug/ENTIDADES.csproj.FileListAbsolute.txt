@@ -5,6 +5,5 @@ C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\ENTI
 C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\ENTIDADES\obj\Debug\ENTIDADES.pdb
 C:\Users\Yampier\Desktop\SistemaAdecuacion\ENTIDADES\bin\Debug\ENTIDADES.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\ENTIDADES\bin\Debug\ENTIDADES.pdb
-C:\Users\Yampier\Desktop\SistemaAdecuacion\ENTIDADES\obj\Debug\ENTIDADES.csprojResolveAssemblyReference.cache
 C:\Users\Yampier\Desktop\SistemaAdecuacion\ENTIDADES\obj\Debug\ENTIDADES.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\ENTIDADES\obj\Debug\ENTIDADES.pdb

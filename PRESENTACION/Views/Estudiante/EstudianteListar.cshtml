@@ -17,7 +17,7 @@
                 <th>APELLIDOS</th>
                 <th>NOMBRES</th>
                 <th>SEDE</th>
-                <th>CONTINUAR</th>
+                <th>ADECUACION</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +32,15 @@
 
                     <td>
                         <div class="block">
-                        @Html.ActionLink("Adecuar", "ProcesoIndex/" + @item.idEstudiante, "Proceso", null, new { @class = "button is-danger is-outlined" })
+                        @{ var adecuado = new NEGOCIO.blAdecuacion().listarTodos().SingleOrDefault(x => x.idEstudiante == item.idEstudiante); }
+                        @if (adecuado == null)
+                        {
+                            @Html.ActionLink("Adecuar", "ProcesoIndex/" + @item.idEstudiante, "Proceso", null, new { @class = "button is-danger is-outlined" })
+}
+                        else
+                        {
+                            <a class="button is-succed is-outlined" disabled>Adecuado</a>
+}
                         </div>
                     </td> 
                 </tr>

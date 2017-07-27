@@ -69,8 +69,6 @@ C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\System.Web.Webpages.
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\DATOS.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\ENTIDADES.pdb
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\NEGOCIO.pdb
-C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\EntityFramework.xml
-C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\EntityFramework.SqlServer.xml
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\System.Web.Razor.xml
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\System.Web.Webpages.xml
@@ -82,3 +80,18 @@ C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\DATOS.pdb
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\obj\Debug\PRESENTACION.csprojResolveAssemblyReference.cache
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\obj\Debug\PRESENTACION.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\obj\Debug\RdlCompile.cache
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\obj\Debug\RdlCompile.compiled
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll

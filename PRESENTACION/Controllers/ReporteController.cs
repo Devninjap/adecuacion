@@ -14,5 +14,10 @@ namespace PRESENTACION.Controllers
             var Model = new NEGOCIO.blDetalleAdecuacion().listarTodos();
             return View(Model);
         }
-    }
+
+		public ActionResult reporte()
+		{
+			return View();
+		}
+	}
 }
