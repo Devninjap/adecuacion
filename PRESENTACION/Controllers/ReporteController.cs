@@ -11,13 +11,16 @@ namespace PRESENTACION.Controllers
         // GET: Reporte
         public ActionResult ReporteIndex()
         {
-            var Model = new NEGOCIO.blDetalleAdecuacion().listarTodos();
+            var Model = new NEGOCIO.blAdecuacion().listarTodos();
             return View(Model);
         }
 
-		public ActionResult reporte()
+		public ActionResult Reporte(int id)
 		{
-			return View();
+            ENTIDADES.adecuacion model = new ENTIDADES.adecuacion { 
+                idAdecuacion = id
+            };
+			return View(model);
 		}
 	}
 }

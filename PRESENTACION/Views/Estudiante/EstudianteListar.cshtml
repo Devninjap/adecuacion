@@ -36,11 +36,11 @@
                         @if (adecuado == null)
                         {
                             @Html.ActionLink("Adecuar", "ProcesoIndex/" + @item.idEstudiante, "Proceso", null, new { @class = "button is-danger is-outlined" })
-}
+                        }
                         else
                         {
                             <a class="button is-succed is-outlined" disabled>Adecuado</a>
-}
+                        }
                         </div>
                     </td> 
                 </tr>

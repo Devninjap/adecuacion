@@ -1,0 +1,9 @@
+﻿@model ENTIDADES.adecuacion
+@{
+    ViewBag.Title = "Index";
+}
+<div class="contenedor" style="height: calc(100% - 52px);">
+    <h1>REPORTE DE ADECUACION</h1>
+    <iframe src="http://localhost:53870/Reporte/reporte.aspx?idAdecuacion=@Model.idAdecuacion" width="100%" height="80%" scrolling="no"></iframe>
+</div>
+

@@ -75,7 +75,6 @@
     font-weight: bold;
     font-family: CODE;
     font-size: 2em;
-
 }
 
 .logo a {
@@ -112,6 +111,7 @@
     width: calc(100% - 250px);
     margin-left: 250px;
     min-height: calc(100% - 52px);
+    height: calc(100% - 52px);
     /*padding-bottom: 100em;*/
     z-index: -1;
     background-color: #f1f1f1;

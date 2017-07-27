@@ -75,11 +75,8 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Registrar" class="btn btn-default button is-success is-outlined" />
+                @Html.ActionLink("Retornar", "EstudianteListar", null, new { @class = "button is-danger is-outlined" })
             </div>
         </div>
     }
-    <br />
-    <div>
-        @Html.ActionLink("Retornar", "EstudianteListar", null, new { @class = "button is-danger is-inverted" })
-    </div>
 </div>

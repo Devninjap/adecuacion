@@ -1,66 +1,62 @@
-﻿@model IEnumerable<ENTIDADES.detalleAdecuacion>
+﻿@model IEnumerable<ENTIDADES.adecuacion>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ReporteIndex";
 }
+
 
 <div class="contenedor">
     <h1>ADECUACIONES</h1>
-
+    <hr />
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
     <table class="table">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.idDetalle)
-            </th>
-            <th>
-                ID-ADECUACION
-            </th>
-            <th>
-                ID-EQUIV
-            </th>
-            <th>
-                NOTA-A
-            </th>
-            <th>
-                NOTA-B
-            </th>
-            <th>
-                FECHA ACTA
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.fechaActa)
-            </th>*@
-            <th>ELEGIR</th>
+            <th>ID</th>
+            <th>CODIGO-ADECUACIÓN</th>
+            <th>F.U.T.</th>
+            <th>RECEPCION</th>
+            <th>PERIODO</th>
+            <th>EMISION</th>
+            <th>ID-ESTUDIANTE</th>
+            <th>VISUALIZAR</th>
         </tr>
 
         @foreach (var item in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.idDetalle)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.idAdecuacion)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.idEquivalencia)
+                    @Html.DisplayFor(modelItem => item.codigoAdecuacion)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.notaAsignaturaA)
+                    @Html.DisplayFor(modelItem => item.futAdecuacion)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.notaAsignaturaB)
+                    @*@Html.DisplayFor(modelItem => item.fechaRecepcion)*@
+                    @item.fechaRecepcion.ToString("d")
                 </td>
                 <td>
-                    @item.fechaActa.ToString("d")
+                    @Html.DisplayFor(modelItem => item.periodo)
                 </td>
                 <td>
-                    <a class="button is-danger is-outlined">VISUALIZAR</a>
+                    @*@Html.DisplayFor(modelItem => item.fechaEmision.ToString("d"))*@
+                    @item.fechaEmision.ToString("d")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idEstudiante)
+                </td>
+                <td>
+                    <a href="@Url.Action("Reporte/"+item.idAdecuacion, "Reporte")" class="button is-danger is-outlined">VER</a>
                 </td>
             </tr>
         }
-
     </table>
 
-
 </div>
+
+
+
