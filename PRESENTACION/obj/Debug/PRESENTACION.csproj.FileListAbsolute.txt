@@ -95,3 +95,18 @@ C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\pt\Microsoft.SqlServ
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\PRESENTACION\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\obj\Debug\RdlCompile.cache
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\PRESENTACION\obj\Debug\RdlCompile.compiled

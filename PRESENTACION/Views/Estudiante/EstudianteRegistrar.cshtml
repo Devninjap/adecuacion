@@ -8,141 +8,78 @@
     @using (Html.BeginForm("EstudianteNuevo", "Estudiante", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
-<<<<<<< HEAD
 
-        <div class="form-horizontal">
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            
-
-            <div class="columns">
-                <div class="field column is-6">
-                    @*@Html.LabelFor(model => model.apellidosEstudiante, htmlAttributes: new { @class = "label" })*@
-                    <label class="label">APELLIDOS</label>
-=======
-        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="columns">
             <div class="column is-6">
                 <div class="field">
                     <label class="label">Apellidos</label>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
                     <div class="control">
                         @Html.EditorFor(model => model.apellidosEstudiante, new { htmlAttributes = new { @class = "input" } })
                         @Html.ValidationMessageFor(model => model.apellidosEstudiante, "", new { @class = "text-danger" })
                     </div>
                 </div>
-<<<<<<< HEAD
-
-                <div class="field column is-6">
-                    @*@Html.LabelFor(model => model.nombresEstudiante, htmlAttributes: new { @class = "label" })*@
-                    <label class="label">NOMBRES</label>
-=======
             </div>
             <div class="column is-6">
                 <div class="field">
                     <label class="label">Nombres</label>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
                     <div class="control">
                         @Html.EditorFor(model => model.nombresEstudiante, new { htmlAttributes = new { @class = "input" } })
                         @Html.ValidationMessageFor(model => model.nombresEstudiante, "", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-
-            <div class="columns">
-                <div class="field column is-2">
-                    @*@Html.LabelFor(model => model.codEstudiante, htmlAttributes: new { @class = "label" })*@
-                    <label class="label">CODIGO</label>
-=======
         </div>
         <div class="columns">
             <div class="column is-2">
                 <div class="field">
                     <label class="label">Codigo</label>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
                     <div class="control">
                         @Html.EditorFor(model => model.codEstudiante, new { htmlAttributes = new { @class = "input" } })
                         @Html.ValidationMessageFor(model => model.codEstudiante, "", new { @class = "text-danger" })
                     </div>
                 </div>
-<<<<<<< HEAD
-                <div class="field column is-5">
-                    @*@Html.LabelFor(model => model.sede, htmlAttributes: new { @class = "label" })*@
-                    <label class="label">SEDE</label>
-=======
             </div>
             <div class="column is-5">
                 <div class="field">
                     <label class="label">Sede</label>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
                     <div class="control">
                         @Html.EditorFor(model => model.sede, new { htmlAttributes = new { @class = "input" } })
                         @Html.ValidationMessageFor(model => model.sede, "", new { @class = "text-danger" })
                     </div>
                 </div>
-<<<<<<< HEAD
-
-                <div class="field column is-5">
-                    @*@Html.LabelFor(model => model.modalidad, htmlAttributes: new { @class = "label" })*@
-                    <label class="label">MODALIDAD</label>
-=======
             </div>
             <div class="column is-5">
                 <div class="field">
                     <label class="label">Modalidad</label>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
                     <div class="control">
                         @Html.EditorFor(model => model.modalidad, new { htmlAttributes = new { @class = "input" } })
                         @Html.ValidationMessageFor(model => model.modalidad, "", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-
-            <div class="columns">
-                <div class="field column is-8">
-                    @*@Html.LabelFor(model => model.carrera, htmlAttributes: new { @class = "label" })*@
-                    <label class="label">CARRERA</label>
-=======
         </div>
         <div class="columns">
             <div class="column is-12">
                 <div class="field">
                     <label class="label">Carrera</label>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
                     <div class="control">
                         @Html.EditorFor(model => model.carrera, new { htmlAttributes = new { @class = "input" } })
                         @Html.ValidationMessageFor(model => model.carrera, "", new { @class = "text-danger" })
                     </div>
                 </div>
-                <br />
             </div>
-<<<<<<< HEAD
-         
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Registrar" class="btn btn-default button is-success is-outlined"/>
-                    @Html.ActionLink("Retornar", "EstudianteListar",null,new { @class="button is-danger is-outlined"})
-                </div>
-=======
         </div>
         <br />
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Registrar" class="btn btn-default button is-success is-outlined"/>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
+                <input type="submit" value="Registrar" class="btn btn-default button is-success is-outlined" />
             </div>
         </div>
     }
     <br />
-<<<<<<< HEAD
-        
-=======
     <div>
-        @Html.ActionLink("Retornar", "EstudianteListar" , null, new { @class = "button is-danger is-inverted"})
+        @Html.ActionLink("Retornar", "EstudianteListar", null, new { @class = "button is-danger is-inverted" })
     </div>
->>>>>>> cb1bdda6767f670f4c3b8ba059c4cb6b6658bdbe
 </div>
