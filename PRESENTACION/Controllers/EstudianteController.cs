@@ -23,8 +23,7 @@ namespace PRESENTACION.Controllers
             return View();
         }
 
-
-
+        
         [HttpPost]
         [AllowAnonymous]
         public ActionResult EstudianteNuevo(estudiante estd)
@@ -33,12 +32,20 @@ namespace PRESENTACION.Controllers
             return RedirectToAction("EstudianteListar","Estudiante");
         }
 
-        //[HttpPost]
-        //[AllowAnonymous]
-        //public ActionResult EstudianteNuevo(estudiante estd)
-        //{
-        //    est.registrar(estd);
-        //    return View();
-        //}
+        public ActionResult EstudianteActualizar(int id)
+        {
+            var operaciones = new claseOperaciones();
+            operaciones.pEstudiante = new NEGOCIO.blEstudiante().consultar(id);
+            return View(operaciones);
+            //return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult EstudianteModificar(estudiante entidad)
+        {
+            est.actualizar(entidad);
+            return RedirectToAction("EstudianteListar", "Estudiante");
+        }
     }
 }

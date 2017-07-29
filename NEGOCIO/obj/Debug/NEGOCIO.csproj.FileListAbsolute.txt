@@ -1,14 +1,3 @@
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\NEGOCIO.dll
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\NEGOCIO.pdb
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\DATOS.dll
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\ENTIDADES.dll
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\EntityFramework.dll
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\DATOS.pdb
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\ENTIDADES.pdb
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\EntityFramework.xml
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Debug\NEGOCIO.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Debug\NEGOCIO.dll
-C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Debug\NEGOCIO.pdb
 C:\Users\Yampier\Desktop\SistemaAdecuacion\NEGOCIO\bin\Debug\NEGOCIO.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\NEGOCIO\bin\Debug\NEGOCIO.pdb
 C:\Users\Yampier\Desktop\SistemaAdecuacion\NEGOCIO\bin\Debug\DATOS.dll
@@ -20,3 +9,14 @@ C:\Users\Yampier\Desktop\SistemaAdecuacion\NEGOCIO\bin\Debug\EntityFramework.xml
 C:\Users\Yampier\Desktop\SistemaAdecuacion\NEGOCIO\obj\Debug\NEGOCIO.csprojResolveAssemblyReference.cache
 C:\Users\Yampier\Desktop\SistemaAdecuacion\NEGOCIO\obj\Debug\NEGOCIO.dll
 C:\Users\Yampier\Desktop\SistemaAdecuacion\NEGOCIO\obj\Debug\NEGOCIO.pdb
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\DATOS.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\ENTIDADES.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\DATOS.pdb
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\ENTIDADES.pdb
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Debug\NEGOCIO.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\Usuario\documents\visual studio 2015\Projects\sistemaAdecuacionIsc\NEGOCIO\obj\Debug\NEGOCIO.pdb

@@ -12,7 +12,7 @@ namespace NEGOCIO
     {
         public bool actualizar(estudiante entidad)
         {
-            throw new NotImplementedException();
+            return new daEstudiante().actualizar(entidad);
         }
 
         public estudiante consultar(int id)

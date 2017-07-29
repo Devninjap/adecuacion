@@ -6,9 +6,9 @@
 
 
 <div class="contenedor">
-    @*<div class="boton-agregar">
-        @Html.ActionLink("Create New", "Create", "Asignatura", null, new { @class = "button is-info is-outlined" })
-    </div>*@
+    <div class="">
+        @Html.ActionLink("Nueva Asignatura", "AsignaturaRegistrar", "Asignatura", null, new { @class = "button is-info is-outlined" })
+    </div>
     <h1>ASIGNATURAS</h1>
 
     <table class="table">
@@ -22,12 +22,12 @@
                 <th>PLAN</th>
                 <th>CODIGO</th>
                 <th>U.E.C</th>
-                <th>CREDITOS</th>
+                @*<th>CREDITOS</th>*@
                 <th>CICLO</th>
                 <th>PLAN</th>
-                <!--<th>CONDICION</th>
-                <th>TECNICO</th>-->
-                @*<th>OPERACIONES</th>*@
+                @*<th>CONDICION</th>
+                <th>TECNICO</th>*@
+                <th>OPERACIONES</th>
             </tr>
         </thead>
         <tbody>
@@ -42,16 +42,18 @@
                     <td>@item.planAsignaturaA</td>
                     <td>@item.codAsignaturaB</td>
                     <td>@item.nomAsignaturaB</td>
-                    <td>@item.creditosAsignaturaB</td>
+                    @*<td>@item.creditosAsignaturaB</td>*@
                     <td>@item.cicloAsignaturaB</td>
                     <td>@item.planAsignaturaB</td>
                     <!--<td>@item.condicion</td>
                     <td>@item.tecnico</td>-->
-                    @*<td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    <td>
+                        @Html.ActionLink("M", null, "Asignatura", null, new { @class = "button is-success" })
+                        @Html.ActionLink("E", null, "Asignatura", null, new { @class = "button is-danger" })
+                        @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                    </td>*@
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                    </td>
                 </tr>
             }
         </tbody>

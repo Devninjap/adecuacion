@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ENTIDADES;
 
 namespace PRESENTACION.Controllers
 {
@@ -14,6 +15,19 @@ namespace PRESENTACION.Controllers
         {
             var model = asg.listarTodos();
             return View(model);
+        }
+
+        public ActionResult AsignaturaRegistrar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult AsignaturaNuevo(equivalenciaAsignatura entidad)
+        {
+            asg.registrar(entidad);
+            return RedirectToAction("AsignaturasListar", "Asignatura");
         }
     }
 }

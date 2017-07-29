@@ -72,7 +72,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "01"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "01" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -106,7 +106,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "02"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "02" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -140,7 +140,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "03"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "03" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -174,7 +174,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "04"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "04" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -208,7 +208,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -243,7 +243,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "06" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -278,7 +278,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "07" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -313,7 +313,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "05"))
+                    @foreach (var item in Model.pEquivalencias.Where(x => x.cicloAsignaturaA == "08" && x.codAsignaturaB != null))
                     {
                         <tr>
                             <td class="idEquivalencia" style="display:none">@Html.DisplayFor(x => item.idEquivalencia)</td>
@@ -331,7 +331,7 @@
             </table>
         </div>
 
-        <button onclick="registrarAdecuacion()" class="button is-success">Registrar Adecuacion</button>
+        <button onclick="registrarAdecuacion()" class="button is-success is-outlined">Registrar Adecuacion</button>
 
         @Html.ActionLink("Listar Estudiantes", "EstudianteListar", "Estudiante", null, new { @class = "button is-danger is-outlined" })
 

@@ -26,6 +26,7 @@ namespace PRESENTACION.Controllers
             {
                 est.registrar(item[i]);
             }
+            RedirectToAction("EstudianteListar", "Estudiante");
         }
 
         [HttpPost]
@@ -34,6 +35,7 @@ namespace PRESENTACION.Controllers
             new NEGOCIO.blAdecuacion().registrar(item);
             int idAdecuacion = new NEGOCIO.blAdecuacion().listarTodos().FirstOrDefault(x => x.idEstudiante == item.idEstudiante).idAdecuacion;
             return idAdecuacion;
+
         }
     }
 }

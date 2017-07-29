@@ -5,7 +5,7 @@
 }
 
 <div class="contenedor">
-    <div class="boton-agregar">
+    <div class="">
         @Html.ActionLink("Nuevo Estudiante", "EstudianteRegistrar", "Estudiante", null, new { @class = "button is-info is-outlined" })
     </div>
     <h1>ESTUDIANTES</h1>
@@ -17,6 +17,7 @@
                 <th>APELLIDOS</th>
                 <th>NOMBRES</th>
                 <th>SEDE</th>
+                <th>ACTUALIZAR</th>
                 <th>ADECUACION</th>
             </tr>
         </thead>
@@ -29,6 +30,7 @@
                     <td>@item.apellidosEstudiante</td>
                     <td>@item.nombresEstudiante</td>
                     <td>@item.sede</td>
+                    <td>@Html.ActionLink("Modificar", "EstudianteActualizar/" + @item.idEstudiante, "Estudiante", null, new { @class = "button is-info is-outlined" })</td>
 
                     <td>
                         <div class="block">

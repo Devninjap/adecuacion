@@ -151,7 +151,7 @@
     width: calc(100% - 50px);
     margin: 25px 25px 0 25px;
     background-color: #fff;
-    padding: 2em;
+    padding: 1.5em;
     font-family: GeosansLight;
 }
 .contenedor>h1 {
@@ -161,5 +161,5 @@
     margin-bottom: 1em;
 }
 .contenedor>.boton-agregar{
-    margin: 2em 0;
+    margin: 2em;
 }

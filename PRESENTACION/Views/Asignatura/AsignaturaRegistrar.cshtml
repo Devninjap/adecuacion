@@ -1,0 +1,184 @@
+﻿@model ENTIDADES.equivalenciaAsignatura
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="contenedor">
+    <h1>ASIGNATURA > EQUIVALENCIA</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="columns">
+                <div class="field column is-3">
+                    @*@Html.LabelFor(model => model.codAsignaturaA, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <label class="label">Codigo Asignatura A</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.codAsignaturaA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.codAsignaturaA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-6">
+                    @*@Html.LabelFor(model => model.nomAsignaturaA, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <label class="label">Nombre Asignatura A</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.nomAsignaturaA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.nomAsignaturaA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="field column is-3">
+                    <label class="label">Horas Teoricas A</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.horasTeoricasA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.horasTeoricasA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Horas Practicas A</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.horasPracticasA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.horasPracticasA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Total Horas A</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.totalHorasA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.totalHorasA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Creditos A</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.creditosAsignaturaA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.creditosAsignaturaA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="field column is-3">
+                    <label class="label">Ciclo A -> '0X'</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.cicloAsignaturaA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.cicloAsignaturaA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Plan A</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.planAsignaturaA, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.planAsignaturaA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            
+            <hr />
+            <div class="columns">
+                <div class="field column is-3">
+                    <label class="label">Codigo Asignatura B</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.codAsignaturaB, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.codAsignaturaB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field field column is-6">
+                    <label class="label">Nombre Asignatura B</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.nomAsignaturaB, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.nomAsignaturaB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            
+            <div class="columns">
+                <div class="field column is-3">
+                    <label class="label">Horas Teoricas B</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.horasTeoricasB, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.horasTeoricasB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Horas Practicas B</label>
+                    <div class="control">
+                        @Html.EditorFor(model => model.horasPracticasB, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.horasPracticasB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Total Horas B</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.totalHorasB, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.totalHorasB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Creditos B</label>
+                    <div class="control">
+                        @Html.EditorFor(model => model.creditosAsignaturaB, new { htmlAttributes = new { @class = "input"}})
+                        @Html.ValidationMessageFor(model => model.creditosAsignaturaB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="field column is-3">
+                    <label class="label">Ciclo B = '0X'</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.cicloAsignaturaB, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.cicloAsignaturaB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Plan B</label>
+                    <div class="control">
+                        @Html.EditorFor(model => model.planAsignaturaB, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.planAsignaturaB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            
+            <div class="columns">
+                <div class="field column is-3">
+                    <label class="label">Condición</label>
+                    <div class="select">
+                        @Html.EditorFor(model => model.condicion, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.condicion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="field column is-3">
+                    <label class="label">Tecnico</label>
+                    <div class="select">
+                        @Html.EditorFor(model => model.tecnico, new { htmlAttributes = new { @class = "input" } })
+                        @Html.ValidationMessageFor(model => model.tecnico, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            
+            <div class="field">
+                <div class="control">
+                    <input type="submit" value="Registrar" class="button is-primary is-outlined" />
+                    @Html.ActionLink("Retornar", "AsignaturasListar", null, new { @class = "button is-danger is-outlined" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

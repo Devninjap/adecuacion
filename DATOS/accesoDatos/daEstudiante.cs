@@ -11,8 +11,26 @@ namespace DATOS.accesoDatos
     {
         public bool actualizar(estudiante entidad)
         {
-            //modificar todos los campos
-            throw new NotImplementedException();
+            try
+            {
+                using (adecuacionIscFiuplaEntities ctx = new adecuacionIscFiuplaEntities())
+                {
+                    estudiante est = ctx.estudiante.SingleOrDefault(x => x.idEstudiante == entidad.idEstudiante);
+                    est.codEstudiante = entidad.codEstudiante;
+                    est.apellidosEstudiante = entidad.apellidosEstudiante;
+                    est.nombresEstudiante = entidad.nombresEstudiante;
+                    est.sede = entidad.sede;
+                    est.modalidad = entidad.modalidad;
+                    est.carrera = entidad.carrera;
+                    ctx.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
         }
 
         public estudiante consultar(int id)
